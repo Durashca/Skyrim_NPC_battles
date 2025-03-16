@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -172,7 +170,7 @@
 <!--            Not a member? <a href="menu.php">Signup now</a>-->
 <!--        </div>-->
     </form>
-    <a href="menu.php">menu</a>
+<!--    <a href="menu.php">menu</a>-->
 </div>
 </body>
 </html>

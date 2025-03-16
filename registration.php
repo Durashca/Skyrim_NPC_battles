@@ -1,8 +1,7 @@
 <?php
 try {
-    $dsn = "mysql:host=localhost;dbname=skyrim_npc_battles";
-    $user = "root";
-    $password = "root";
+    session_start();
+    include('config.php');
 
     $pdo = new PDO($dsn, $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -11,6 +10,9 @@ try {
         $stmt = $pdo->prepare("INSERT INTO users (name) VALUES (:name);");
         $stmt->bindParam(":name", $_POST['name']);
         $stmt->execute();
+
+        $_SESSION['username'] = $_POST['name'];
+
 
         header("Location: menu.php");
         exit();
